@@ -9,10 +9,9 @@
  * Medical Research Council
  *
  */
-
+ 
 package ucl.physiol.neuroconstruct.cell.examples;
 
-import javax.vecmath.*;
 
 import ucl.physiol.neuroconstruct.cell.*;
 import ucl.physiol.neuroconstruct.cell.utils.*;
@@ -79,6 +78,8 @@ public class OneSegment extends Cell
         System.out.println(CellTopologyHelper.printDetails(cell, null));
 
         Cell newCell = (Cell)cell.clone();
+        
+        System.out.println(CellTopologyHelper.printDetails(newCell, null));
 
     }
 
