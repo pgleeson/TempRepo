@@ -113,18 +113,6 @@ public class GranuleCell extends Cell
 
     }
 
-    private Segment addRelativeDendrite(Segment parent, Point3f relPosition, String sectionName)
-    {
-        Point3f newPosition = (new Point3f(parent.getEndPointPosition()));
-        newPosition.add(relPosition);
-
-        float newRadius = parent.getRadius()*.6f;
-
-        String newName = "Dend_"+ getOnlyDendriticSegments().size();
-
-        Segment tempDend = addDendriticSegment(newRadius, newName,newPosition, parent, 1, sectionName);
-        return tempDend;
-    }
 
     private Segment addRelativeAxon(Segment parent, Point3f relPosition, String sectionName)
     {

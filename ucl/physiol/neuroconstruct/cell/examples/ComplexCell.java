@@ -94,7 +94,7 @@ public class ComplexCell extends Cell
 
         posnEndPoint = new Point3f(10, -5, 0);
 
-        Segment dendSeg2 = addDendriticSegment(dendriteRadius*0.5f, "mainDend3", posnEndPoint, dendSeg1, 1,
+        addDendriticSegment(dendriteRadius*0.5f, "mainDend3", posnEndPoint, dendSeg1, 1,
                                                longSection1);
 
         posnEndPoint = new Point3f(-10, 0, 0);
@@ -106,7 +106,7 @@ public class ComplexCell extends Cell
 
         posnEndPoint = new Point3f(-15, -10, 0);
 
-        Segment dendSeg4 = addDendriticSegment(dendriteRadius, "mainDend5", posnEndPoint,
+        addDendriticSegment(dendriteRadius, "mainDend5", posnEndPoint,
                                                dendSeg3, 1, dendSeg3.getSection().getSectionName());
 
 

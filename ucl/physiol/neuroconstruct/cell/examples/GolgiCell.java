@@ -67,7 +67,7 @@ public class GolgiCell  extends Cell
 
         Segment rootAxon = addAxonalSegment(axonRadius, "root", posnEndPoint, somaSection, 1, "axonRootSec");
 
-        Vector layer = new Vector();
+        Vector<Segment> layer = new Vector<Segment>();
 
         layer.add(addRelativeAxon(rootAxon, new Point3f(-30,-20,-30), axonRadius));
         layer.add(addRelativeAxon(rootAxon, new Point3f(-30,-20,30), axonRadius));

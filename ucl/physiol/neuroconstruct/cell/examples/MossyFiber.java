@@ -83,7 +83,7 @@ public class MossyFiber extends Cell
         Segment rootDend = addDendriticSegment(dendriteDiam, "dend_root",posnEndPoint, somaSection, 0, "dendSec");
 
         Point3f posnEndPoint2 = new Point3f(-2,-20,0);
-        Segment dend = addRelativeDendrite(rootDend, posnEndPoint2);
+        addRelativeDendrite(rootDend, posnEndPoint2);
 
     }
 

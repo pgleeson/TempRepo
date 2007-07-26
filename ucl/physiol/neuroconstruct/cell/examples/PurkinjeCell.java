@@ -15,7 +15,6 @@ package ucl.physiol.neuroconstruct.cell.examples;
 import ucl.physiol.neuroconstruct.cell.*;
 
 
-import ucl.physiol.neuroconstruct.j3D.*;
 import javax.vecmath.*;
 import java.util.*;
 
@@ -63,10 +62,10 @@ public class PurkinjeCell extends Cell
         mainAxon.getSection().setStartRadius(axonRadius);
 
         posnEndPoint = new Point3f(-5,-260,-0);
-        Segment axon1 = addAxonalSegment(axonRadius, "axon1", posnEndPoint, mainAxon, 1, "AxonSec1");
+        addAxonalSegment(axonRadius, "axon1", posnEndPoint, mainAxon, 1, "AxonSec1");
 
         posnEndPoint = new Point3f(5,-260,-0);
-        Segment axon2 = addAxonalSegment(axonRadius, "axon2", posnEndPoint, mainAxon, 1, "AxonSec2");
+        addAxonalSegment(axonRadius, "axon2", posnEndPoint, mainAxon, 1, "AxonSec2");
 
 
         float dendriteRadius = 1.5f;
@@ -87,7 +86,7 @@ public class PurkinjeCell extends Cell
         Segment mainDend3 = addDendriticSegment(dendriteRadius, "mainDend3",posnEndPoint, rootDend,1, "DendSec3");
 
 
-        Vector secondLayer = new Vector();
+        Vector<Segment> secondLayer = new Vector<Segment>();
 
         secondLayer.add(addRelativeDendrite(mainDend1, new Point3f(0,30,-10)));
         secondLayer.add(addRelativeDendrite(mainDend1, new Point3f(0,30,10)));

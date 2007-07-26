@@ -122,17 +122,17 @@ public class SimpleCell extends Cell
         Segment mainDendSeg = addDendriticSegment(dendriteRadius, "mainDend", posnEndPoint, somaSection, 0,"mainDendSec");
 
         posnEndPoint = new Point3f(40,15, 0);
-        Segment dendSeg1 = addDendriticSegment(dendriteRadius, "subDend1", posnEndPoint, mainDendSeg, 1, "subDendSec1");
+        addDendriticSegment(dendriteRadius, "subDend1", posnEndPoint, mainDendSeg, 1, "subDendSec1");
 
         posnEndPoint = new Point3f(45,0,00);
-        Segment dendSeg2 = addDendriticSegment(dendriteRadius, "subDend2", posnEndPoint, mainDendSeg, 1, "subDendSec2");
+        addDendriticSegment(dendriteRadius, "subDend2", posnEndPoint, mainDendSeg, 1, "subDendSec2");
 
         posnEndPoint = new Point3f(40,-15,0);
-        Segment dendSeg3 = addDendriticSegment(dendriteRadius, "subDend3", posnEndPoint, mainDendSeg, 1, "subDendSec3");
+        addDendriticSegment(dendriteRadius, "subDend3", posnEndPoint, mainDendSeg, 1, "subDendSec3");
 
 
         posnEndPoint = new Point3f(-30,0,0);
-        Segment mainAxon = addAxonalSegment(axonRadius, "mainAxon", posnEndPoint, somaSection, 1,"mainAxonSec");
+        addAxonalSegment(axonRadius, "mainAxon", posnEndPoint, somaSection, 1,"mainAxonSec");
 /*
         posnEndPoint = new Point3f(0,30,10);
         addAxonalSegment(axonRadius, "subAxon1", posnEndPoint, mainAxon, 1, "subAxonSec1");
@@ -167,7 +167,7 @@ public class SimpleCell extends Cell
 
         System.out.println(CellTopologyHelper.printDetails(cell, null));
 
-        Cell newCell = (Cell)cell.clone();
+        cell.clone();
 
 /*
 
