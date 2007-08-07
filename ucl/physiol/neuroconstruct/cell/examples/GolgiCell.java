@@ -26,6 +26,8 @@ import java.util.*;
  *
  */
 
+@SuppressWarnings("serial")
+
 public class GolgiCell  extends Cell
 {
 
@@ -102,7 +104,8 @@ public class GolgiCell  extends Cell
             float zFact = (float)Math.cos(theta);
 
             posnEndPoint = new Point3f(60*xFact,60,60*zFact);
-            Segment radialDend = addDendriticSegment(dendriteDiam, "radialDend_"+i , posnEndPoint, somaSection, 0, "radialDend_"+i+"_Sec");
+            Segment radialDend = addDendriticSegment(dendriteDiam, 
+                    "radialDend_"+i , posnEndPoint, somaSection, 0, "radialDend_"+i+"_Sec", false);
 
             Point3f posnNew = new Point3f(30*xFact,40,30*zFact);
             Segment radialDend2 = addRelativeDendrite(radialDend, posnNew);
@@ -133,7 +136,7 @@ public class GolgiCell  extends Cell
 
         String newName = "Dend_"+ getOnlyDendriticSegments().size();
 
-        Segment tempDend = addDendriticSegment(newRadius, newName,newPosition, parent, 1, newName+"_Sec");
+        Segment tempDend = addDendriticSegment(newRadius, newName,newPosition, parent, 1, newName+"_Sec", true);
         return tempDend;
     }
 

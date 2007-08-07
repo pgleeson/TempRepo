@@ -27,7 +27,7 @@ import ucl.physiol.neuroconstruct.cell.utils.*;
   */
 
 
-
+@SuppressWarnings("serial")
 
 public class GranuleCell extends Cell
 {

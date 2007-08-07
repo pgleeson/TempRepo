@@ -28,6 +28,8 @@ import java.util.*;
  */
 
 
+@SuppressWarnings("serial")
+
 public class PurkinjeCell extends Cell
 {
 
@@ -71,19 +73,19 @@ public class PurkinjeCell extends Cell
         float dendriteRadius = 1.5f;
 
         posnEndPoint = new Point3f(0,30,0);
-        Segment rootDend = addDendriticSegment(dendriteRadius, "root",posnEndPoint, somaSection,1, "DendRootSec");
+        Segment rootDend = addDendriticSegment(dendriteRadius, "root",posnEndPoint, somaSection,1, "DendRootSec", false);
         rootDend.getSection().setStartRadius(dendriteRadius);
 
         posnEndPoint = new Point3f(0,50,0);
-        Segment mainDend1 = addDendriticSegment(dendriteRadius, "mainDend1",posnEndPoint, rootDend,1, "DendSec1");
+        Segment mainDend1 = addDendriticSegment(dendriteRadius, "mainDend1",posnEndPoint, rootDend,1, "DendSec1", true);
 
         posnEndPoint = new Point3f(0,50,-40);
 
-        Segment mainDend2 = addDendriticSegment(dendriteRadius, "mainDend2",posnEndPoint, rootDend,1, "DendSec2");
+        Segment mainDend2 = addDendriticSegment(dendriteRadius, "mainDend2",posnEndPoint, rootDend,1, "DendSec2", true);
 
         posnEndPoint = new Point3f(0,50,40);
 
-        Segment mainDend3 = addDendriticSegment(dendriteRadius, "mainDend3",posnEndPoint, rootDend,1, "DendSec3");
+        Segment mainDend3 = addDendriticSegment(dendriteRadius, "mainDend3",posnEndPoint, rootDend,1, "DendSec3", true);
 
 
         Vector<Segment> secondLayer = new Vector<Segment>();
@@ -125,7 +127,7 @@ public class PurkinjeCell extends Cell
 
         String newName = "Dend_"+ getOnlyDendriticSegments().size();
 
-        Segment tempDend = addDendriticSegment(newRadius, newName,newPosition, parent, 1, newName+"_Sec");
+        Segment tempDend = addDendriticSegment(newRadius, newName,newPosition, parent, 1, newName+"_Sec", true);
 
         return tempDend;
     }

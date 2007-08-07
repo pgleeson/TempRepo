@@ -26,7 +26,7 @@ import ucl.physiol.neuroconstruct.cell.*;
   */
 
 
-
+@SuppressWarnings("serial")
 
 public class MossyFiber extends Cell
 {
@@ -80,7 +80,7 @@ public class MossyFiber extends Cell
         float dendriteDiam = 1f;
 
         posnEndPoint = new Point3f(2,-20,0);
-        Segment rootDend = addDendriticSegment(dendriteDiam, "dend_root",posnEndPoint, somaSection, 0, "dendSec");
+        Segment rootDend = addDendriticSegment(dendriteDiam, "dend_root",posnEndPoint, somaSection, 0, "dendSec", false);
 
         Point3f posnEndPoint2 = new Point3f(-2,-20,0);
         addRelativeDendrite(rootDend, posnEndPoint2);
@@ -96,7 +96,7 @@ public class MossyFiber extends Cell
 
         String newName = "Dend_"+ getOnlyDendriticSegments().size();
 
-        Segment tempDend = addDendriticSegment(newRadius, newName,newPosition, parent, 1, "dendSec");
+        Segment tempDend = addDendriticSegment(newRadius, newName,newPosition, parent, 1, "dendSec", true);
 
         return tempDend;
     }

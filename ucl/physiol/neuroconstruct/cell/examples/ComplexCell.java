@@ -26,6 +26,7 @@ import ucl.physiol.neuroconstruct.cell.utils.*;
   */
 
 
+@SuppressWarnings("serial")
 
 public class ComplexCell extends Cell
 {
@@ -88,26 +89,26 @@ public class ComplexCell extends Cell
                                                posnEndPoint,
                                                somaStartSection,
                                                0,
-                                               longSection1);
+                                               longSection1, false);
 
         dendSeg1.getSection().setStartRadius(dendriteRadius*1.5f);
 
         posnEndPoint = new Point3f(10, -5, 0);
 
         addDendriticSegment(dendriteRadius*0.5f, "mainDend3", posnEndPoint, dendSeg1, 1,
-                                               longSection1);
+                                               longSection1, false);
 
         posnEndPoint = new Point3f(-10, 0, 0);
 
         Segment dendSeg3 = addDendriticSegment(dendriteRadius, "mainDend4", posnEndPoint,
-                                               somaStartSection, 0, longSection2);
+                                               somaStartSection, 0, longSection2, false);
 
         dendSeg3.getSection().setStartRadius(dendriteRadius);
 
         posnEndPoint = new Point3f(-15, -10, 0);
 
         addDendriticSegment(dendriteRadius, "mainDend5", posnEndPoint,
-                                               dendSeg3, 1, dendSeg3.getSection().getSectionName());
+                                               dendSeg3, 1, dendSeg3.getSection().getSectionName(), false);
 
 
 

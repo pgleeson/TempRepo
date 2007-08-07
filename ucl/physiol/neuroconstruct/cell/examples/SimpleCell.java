@@ -26,7 +26,7 @@ import ucl.physiol.neuroconstruct.utils.*;
   *
   */
 
-
+@SuppressWarnings("serial")
 
 public class SimpleCell extends Cell
 {
@@ -119,16 +119,18 @@ public class SimpleCell extends Cell
 */
 
         Point3f posnEndPoint = new Point3f(20,0,0);
-        Segment mainDendSeg = addDendriticSegment(dendriteRadius, "mainDend", posnEndPoint, somaSection, 0,"mainDendSec");
+        
+        Segment mainDendSeg = addDendriticSegment(dendriteRadius, 
+                "mainDend", posnEndPoint, somaSection, 0,"mainDendSec", false);
 
         posnEndPoint = new Point3f(40,15, 0);
-        addDendriticSegment(dendriteRadius, "subDend1", posnEndPoint, mainDendSeg, 1, "subDendSec1");
+        addDendriticSegment(dendriteRadius, "subDend1", posnEndPoint, mainDendSeg, 1, "subDendSec1", true);
 
         posnEndPoint = new Point3f(45,0,00);
-        addDendriticSegment(dendriteRadius, "subDend2", posnEndPoint, mainDendSeg, 1, "subDendSec2");
+        addDendriticSegment(dendriteRadius, "subDend2", posnEndPoint, mainDendSeg, 1, "subDendSec2", true);
 
         posnEndPoint = new Point3f(40,-15,0);
-        addDendriticSegment(dendriteRadius, "subDend3", posnEndPoint, mainDendSeg, 1, "subDendSec3");
+        addDendriticSegment(dendriteRadius, "subDend3", posnEndPoint, mainDendSeg, 1, "subDendSec3", true);
 
 
         posnEndPoint = new Point3f(-30,0,0);
