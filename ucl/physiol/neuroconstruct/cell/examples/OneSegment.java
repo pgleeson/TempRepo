@@ -21,7 +21,7 @@ import ucl.physiol.neuroconstruct.utils.*;
   * A simple cell for test purposes.
   *
   * @author Padraig Gleeson
-  * @version 1.0.4
+  * @version 1.0.6
   *
   */
 
