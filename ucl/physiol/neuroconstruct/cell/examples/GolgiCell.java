@@ -22,7 +22,7 @@ import java.util.*;
  * A simple cell in the cerebellum, used for testing purposes
  *
  * @author Padraig Gleeson
- * @version 1.0.6
+ *  
  *
  */
 
