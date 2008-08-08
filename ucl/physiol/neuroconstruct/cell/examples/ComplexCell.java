@@ -18,7 +18,8 @@ import javax.vecmath.*;
 import ucl.physiol.neuroconstruct.cell.utils.*;
 
  /**
-  * A simple cell for test purposes.
+  * A simple cell for test purposes. Note: no longer included as 
+  * example under Add New Cell Type...
   *
   * @author Padraig Gleeson
   *  

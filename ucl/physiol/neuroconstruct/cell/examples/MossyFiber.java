@@ -18,7 +18,8 @@ import ucl.physiol.neuroconstruct.cell.*;
 
  /**
   *
-  * A simple cell in the cerebellum, used for testing purposes
+  * A simple cell in the cerebellum, used for testing purposes. Note: no longer included as 
+  * example under  Add New Cell Type...
   *
   * @author Padraig Gleeson
   *  
